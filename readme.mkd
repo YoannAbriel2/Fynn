@@ -1,0 +1,1 @@
+Please, before running, allow cors from anywhere using this link https://cors-anywhere.herokuapp.com/corsdemo

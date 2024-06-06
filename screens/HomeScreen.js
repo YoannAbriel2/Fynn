@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, Button } from 'react-native';
 import axios from 'axios';
 
-const HomeScreen = ({ route }) => {
+const HomeScreen = ({ route, navigation }) => {
   const { token } = route.params;
   const [userName, setUserName] = useState('');
 
@@ -33,6 +33,10 @@ const HomeScreen = ({ route }) => {
   return (
     <View style={styles.container}>
       <Text>Welcome, {userName}!</Text>
+      <Button
+        title="Decode Plate"
+        onPress={() => navigation.navigate('Decode', { token })}
+      />
     </View>
   );
 };

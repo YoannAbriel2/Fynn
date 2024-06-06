@@ -8,7 +8,7 @@ const LoginScreen = ({ navigation }) => {
   const [error, setError] = useState('');
 
   const login = () => {
-    axios.post('https://connect.munic.io/oauth/token', {
+    axios.post('https://cors-anywhere.herokuapp.com/https://connect.munic.io/oauth/token', {
       grant_type: 'password',
       username: username,
       password: password,
@@ -54,19 +54,18 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     padding: 20,
-},
-input: {
-  height: 40,
-  borderColor: 'gray',
-  borderWidth: 1,
-  marginBottom: 12,
-  padding: 8,
-},
-error: {
-  color: 'red',
-  marginTop: 10,
-},
+  },
+  input: {
+    height: 40,
+    borderColor: 'gray',
+    borderWidth: 1,
+    marginBottom: 12,
+    padding: 8,
+  },
+  error: {
+    color: 'red',
+    marginTop: 10,
+  },
 });
 
 export default LoginScreen;
-
