@@ -38,6 +38,7 @@ const DecodeScreen = ({ route }) => {
             color
             urlVehicleImage
             co2Emission
+            critair
             engineDisplacement
             engineOutputPower
             top_speed
@@ -103,6 +104,7 @@ const DecodeScreen = ({ route }) => {
           <Text>Seats: {vehicleInfo.seats}</Text>
           <Text>Color: {vehicleInfo.color}</Text>
           <Text>CO2 Emission: {vehicleInfo.co2Emission}</Text>
+          <Text>Critair: {vehicleInfo.critair}</Text>
           <Text>Engine Displacement: {vehicleInfo.engineDisplacement}</Text>
           <Text>Engine Output Power: {vehicleInfo.engineOutputPower}</Text>
           <Text>Top Speed: {vehicleInfo.top_speed}</Text>
